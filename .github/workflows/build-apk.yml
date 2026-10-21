@@ -21,11 +21,10 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-            - name: Set up Android
+      - name: Set up Android
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 11076708
-  
 
       - name: Install Android SDK
         run: |
@@ -69,7 +68,7 @@ jobs:
               defaultConfig {
                   applicationId 'com.sandiprai.robert'
                   minSdk 23
-                  targetSdk 28
+                  targetSdk 35
                   versionCode 1
                   versionName '1.0'
               }
@@ -123,4 +122,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Robert-Tic-Tac-Toe-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/
